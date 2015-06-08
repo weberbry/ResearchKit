@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ORKDrawingContentView : ORKActiveStepCustomView
 
+@property (nonatomic, strong) NSMutableArray *paths;
+
 @end
 
 NS_ASSUME_NONNULL_END

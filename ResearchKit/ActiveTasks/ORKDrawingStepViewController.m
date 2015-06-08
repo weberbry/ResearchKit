@@ -93,6 +93,8 @@
 - (void)stepDidFinish {
     [super stepDidFinish];
     
+    self.samples = _drawingContentView.paths;
+    
     _expired = YES;
     [_drawingContentView finishStep:self];
     [self goForward];

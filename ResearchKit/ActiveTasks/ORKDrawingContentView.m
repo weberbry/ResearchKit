@@ -21,7 +21,6 @@
 @interface ORKDrawingContentView ()
 
 @property (nonatomic, strong) UIBezierPath *currentPath;
-@property (nonatomic, strong) NSMutableArray *paths;
 
 @end
 

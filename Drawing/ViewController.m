@@ -11,49 +11,51 @@
 #import "ORKDrawingStepViewController.h"
 #import "ORKDrawingStep.h"
 
-@interface ViewController ()
+@interface ViewController () <ORKTaskViewControllerDelegate>
+
+@property (nonatomic) BOOL presented;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.view setBackgroundColor:[UIColor redColor]];
     
-    ORKInstructionStep *introStep = [[ORKInstructionStep alloc] initWithIdentifier:@"Intro"];
-    ORKDrawingStep *drawingStep = [[ORKDrawingStep alloc] initWithIdentifier:@"Drawing"];
-    ORKInstructionStep *outroStep = [[ORKInstructionStep alloc] initWithIdentifier:@"Out"];
-
-    drawingStep.stepDuration = 10;
-    drawingStep.shouldContinueOnFinish = YES;
-    drawingStep.shouldStartTimerAutomatically = YES;
-    ORKOrderedTask *tapOrderTask = [[ORKOrderedTask alloc] initWithIdentifier:@"drawing" steps:@[introStep, drawingStep, outroStep]];
-    
-    
-//    ORKOrderedTask *tapOrderTask2 = [ORKOrderedTask twoFingerTappingIntervalTaskWithIdentifier:@"Tap Test" intendedUseDescription:@"Tap" duration:10 options:ORKPredefinedTaskOptionNone];
-    
-    ORKTaskViewController *vc = [[ORKTaskViewController alloc] initWithTask:tapOrderTask taskRunUUID:nil];
-    
-//    ORKTappingIntervalStep *step = [[ORKTappingIntervalStep alloc] init];
-//    step.stepDuration = 5;
-//    ORKTappingIntervalStepViewController *vc =[[ORKTappingIntervalStepViewController alloc] initWithStep:step];
-    
-    //ORKDrawingStepViewController *vc = [[ORKDrawingStepViewController alloc] initWithStep:step];
-    
-    [self presentViewController:vc animated:YES completion:nil];
+    if (!self.presented) {
+        ORKInstructionStep *introStep = [[ORKInstructionStep alloc] initWithIdentifier:@"Intro"];
+        ORKDrawingStep *drawingStep = [[ORKDrawingStep alloc] initWithIdentifier:@"Drawing"];
+        ORKInstructionStep *outroStep = [[ORKInstructionStep alloc] initWithIdentifier:@"Out"];
+        
+        drawingStep.stepDuration = 10;
+        drawingStep.shouldContinueOnFinish = YES;
+        drawingStep.shouldStartTimerAutomatically = YES;
+        ORKOrderedTask *drawingOrderTask = [[ORKOrderedTask alloc] initWithIdentifier:@"drawing" steps:@[introStep, drawingStep, outroStep]];
+        
+        ORKTaskViewController *vc = [[ORKTaskViewController alloc] initWithTask:drawingOrderTask taskRunUUID:nil];
+        vc.delegate = self;
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)taskViewController:(ORKTaskViewController * __nonnull)taskViewController didFinishWithReason:(ORKTaskViewControllerFinishReason)reason error:(nullable NSError *)error {
+    NSArray *paths = [[taskViewController.result.results objectAtIndex:1] results];
+    
+    self.presented = YES;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    for (UIBezierPath *path in [(ORKTappingIntervalResult *)paths.firstObject samples]) {
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        shapeLayer.path = [path CGPath];
+        shapeLayer.strokeColor = [[UIColor blueColor] CGColor];
+        shapeLayer.lineWidth = 3.0;
+        shapeLayer.fillColor = [[UIColor clearColor] CGColor];
+        
+        [self.view.layer addSublayer:shapeLayer];
+    }
+
 }
 
 @end
