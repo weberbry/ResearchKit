@@ -52,19 +52,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    self.view.backgroundColor = [UIColor yellowColor];
-//    _touchDownRecognizer = [UIGestureRecognizer new];
-//    _touchDownRecognizer.delegate = self;
-//    [self.view addGestureRecognizer:_touchDownRecognizer];
-    
-    self.activeStepView.stepViewFillsAvailableSpace = YES;
+        self.activeStepView.stepViewFillsAvailableSpace = YES;
     
     self.timerUpdateInterval = 0.1;
     
-    //_drawingContentView = [[ORKDrawingContentView alloc] init];
-    
-    _drawingContentView = [[ORKDrawingContentView alloc] initWithFrame:CGRectMake(0, 0, 320, 500)];
+    _drawingContentView = [[ORKDrawingContentView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
     _drawingContentView.backgroundColor = [UIColor orangeColor];
     self.activeStepView.activeCustomView = _drawingContentView;
 }
@@ -72,37 +64,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     _viewSize = self.view.frame.size;
-}
-
-- (void)receiveTouch:(UITouch *)touch onButton:(ORKTappingButtonIdentifier)buttonIdentifier {
-    if (_expired || self.samples == nil) {
-        return;
-    }
-    
-    NSTimeInterval mediaTime = CACurrentMediaTime();
-    
-    if (_tappingStart == 0) {
-        _tappingStart = mediaTime;
-    }
-    
-    
-    CGPoint location = [touch locationInView:self.view];
-    
-    // Add new sample
-    mediaTime = mediaTime-_tappingStart;
-    
-    ORKTappingSample *sample = [[ORKTappingSample alloc] init];
-    sample.buttonIdentifier = buttonIdentifier;
-    sample.location = location;
-    sample.timestamp = mediaTime;
-    
-    [self.samples addObject:sample];
-    
-    if (buttonIdentifier == ORKTappingButtonIdentifierLeft || buttonIdentifier == ORKTappingButtonIdentifierRight) {
-        _hitButtonCount++;
-    }
-    // Update label
-    //[_tappingContentView setTapCount:_hitButtonCount];
 }
 
 - (ORKStepResult *)result {
@@ -139,36 +100,6 @@
 
 - (void)start {
     [super start];
-}
-
-#pragma mark buttonAction
-
-- (IBAction)buttonPressed:(id)button forEvent:(UIEvent *)event {
-    
-//    if (self.samples == nil) {
-//        // Start timer on first touch event on button
-//        _samples = [NSMutableArray array];
-//        _hitButtonCount = 0;
-//        [self start];
-//    }
-//    
-//    NSInteger index = (button == _tappingContentView.tapButton1) ? ORKTappingButtonIdentifierLeft : ORKTappingButtonIdentifierRight;
-//    
-//    [self receiveTouch:[[event touchesForView:button] anyObject] onButton:index];
-}
-
-#pragma mark UIGestureRecognizerDelegate
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    CGPoint location = [touch locationInView:self.view];
-    
-    BOOL shouldReceive = !(CGRectContainsPoint(_buttonRect1, location) || CGRectContainsPoint(_buttonRect2, location));
-    
-    if (shouldReceive && touch.phase == UITouchPhaseBegan) {
-        [self receiveTouch:touch onButton:ORKTappingButtonIdentifierNone];
-    }
-    
-    return NO;
 }
 
 @end
