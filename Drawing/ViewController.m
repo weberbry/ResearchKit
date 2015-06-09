@@ -24,12 +24,14 @@
     
     if (!self.presented) {
         ORKInstructionStep *introStep = [[ORKInstructionStep alloc] initWithIdentifier:@"Intro"];
-        ORKDrawingStep *drawingStep = [[ORKDrawingStep alloc] initWithIdentifier:@"Drawing"];
-        ORKInstructionStep *outroStep = [[ORKInstructionStep alloc] initWithIdentifier:@"Out"];
+        introStep.title = @"Welcome to the Study";
+        introStep.text = @"Draw Something On The Next Screen";
         
-        drawingStep.stepDuration = 10;
-        drawingStep.shouldContinueOnFinish = YES;
-        drawingStep.shouldStartTimerAutomatically = YES;
+        ORKDrawingStep *drawingStep = [[ORKDrawingStep alloc] initWithIdentifier:@"Drawing"];
+        
+        ORKInstructionStep *outroStep = [[ORKInstructionStep alloc] initWithIdentifier:@"Out"];
+        outroStep.title = @"You're Done!";
+        
         ORKOrderedTask *drawingOrderTask = [[ORKOrderedTask alloc] initWithIdentifier:@"drawing" steps:@[introStep, drawingStep, outroStep]];
         
         ORKTaskViewController *vc = [[ORKTaskViewController alloc] initWithTask:drawingOrderTask taskRunUUID:nil];
@@ -40,13 +42,12 @@
 }
 
 - (void)taskViewController:(ORKTaskViewController * __nonnull)taskViewController didFinishWithReason:(ORKTaskViewControllerFinishReason)reason error:(nullable NSError *)error {
-    NSArray *paths = [[taskViewController.result.results objectAtIndex:1] results];
     
     self.presented = YES;
-    
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    for (UIBezierPath *path in [(ORKTappingIntervalResult *)paths.firstObject samples]) {
+    NSArray *paths = [[taskViewController.result.results objectAtIndex:1] results];
+    for (UIBezierPath *path in paths) {
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         shapeLayer.path = [path CGPath];
         shapeLayer.strokeColor = [[UIColor blueColor] CGColor];

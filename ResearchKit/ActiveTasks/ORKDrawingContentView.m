@@ -24,7 +24,6 @@
 
 @end
 
-
 @implementation ORKDrawingContentView
 
 - (void)drawRect:(CGRect)rect {
