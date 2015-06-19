@@ -36,10 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
     self.activeStepView.stepViewFillsAvailableSpace = YES;
-    
-    _drawingContentView = [[ORKDrawingContentView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 500)];
+    _drawingContentView = [[ORKDrawingContentView alloc] init];
     _drawingContentView.backgroundColor = [UIColor lightGrayColor];
     self.activeStepView.activeCustomView = _drawingContentView;
 }
