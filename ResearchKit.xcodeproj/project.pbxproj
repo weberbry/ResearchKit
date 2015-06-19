@@ -22,6 +22,21 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		07A0CD671B23650500185CEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A0CD661B23650500185CEE /* main.m */; };
+		07A0CD6A1B23650500185CEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A0CD691B23650500185CEE /* AppDelegate.m */; };
+		07A0CD6D1B23650500185CEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A0CD6C1B23650500185CEE /* ViewController.m */; };
+		07A0CD701B23650500185CEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A0CD6E1B23650500185CEE /* Main.storyboard */; };
+		07A0CD721B23650500185CEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A0CD711B23650500185CEE /* Images.xcassets */; };
+		07A0CD751B23650500185CEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A0CD731B23650500185CEE /* LaunchScreen.xib */; };
+		07A0CD811B23650500185CEE /* DrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A0CD801B23650500185CEE /* DrawingTests.m */; };
+		07A0CD881B23660100185CEE /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B183A5951A8535D100C76870 /* ResearchKit.framework */; };
+		07A0CD891B23660100185CEE /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B183A5951A8535D100C76870 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07A0CD931B2367B200185CEE /* ORKDrawingStepViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A0CD911B2367B200185CEE /* ORKDrawingStepViewController.h */; };
+		07A0CD941B2367B200185CEE /* ORKDrawingStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A0CD921B2367B200185CEE /* ORKDrawingStepViewController.m */; };
+		07A0CD971B23686700185CEE /* ORKDrawingContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A0CD951B23686700185CEE /* ORKDrawingContentView.h */; };
+		07A0CD981B23686700185CEE /* ORKDrawingContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A0CD961B23686700185CEE /* ORKDrawingContentView.m */; };
+		07A0CD9C1B23D2EF00185CEE /* ORKDrawingStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A0CD9A1B23D2EF00185CEE /* ORKDrawingStep.h */; };
+		07A0CD9D1B23D2EF00185CEE /* ORKDrawingStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A0CD9B1B23D2EF00185CEE /* ORKDrawingStep.m */; };
 		147503AF1AEE8071004B17F3 /* ORKAudioGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 147503AD1AEE8071004B17F3 /* ORKAudioGenerator.h */; };
 		147503B01AEE8071004B17F3 /* ORKAudioGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 147503AE1AEE8071004B17F3 /* ORKAudioGenerator.m */; };
 		147503B71AEE807C004B17F3 /* ORKToneAudiometryContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 147503B11AEE807C004B17F3 /* ORKToneAudiometryContentView.h */; };
@@ -395,6 +410,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		07A0CD7B1B23650500185CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FFF18351829DB1D00167070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A0CD611B23650500185CEE;
+			remoteInfo = Drawing;
+		};
+		07A0CD8A1B23660100185CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FFF18351829DB1D00167070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 		86CC8EA11AC09332001CCD89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3FFF18351829DB1D00167070 /* Project object */;
@@ -411,7 +440,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		07A0CD8C1B23660200185CEE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07A0CD891B23660100185CEE /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		07A0CD621B23650500185CEE /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A0CD651B23650500185CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A0CD661B23650500185CEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07A0CD681B23650500185CEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07A0CD691B23650500185CEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07A0CD6B1B23650500185CEE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07A0CD6C1B23650500185CEE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07A0CD6F1B23650500185CEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07A0CD711B23650500185CEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07A0CD741B23650500185CEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		07A0CD7A1B23650500185CEE /* DrawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A0CD7F1B23650500185CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A0CD801B23650500185CEE /* DrawingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingTests.m; sourceTree = "<group>"; };
+		07A0CD911B2367B200185CEE /* ORKDrawingStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKDrawingStepViewController.h; sourceTree = "<group>"; };
+		07A0CD921B2367B200185CEE /* ORKDrawingStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKDrawingStepViewController.m; sourceTree = "<group>"; };
+		07A0CD951B23686700185CEE /* ORKDrawingContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKDrawingContentView.h; sourceTree = "<group>"; };
+		07A0CD961B23686700185CEE /* ORKDrawingContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKDrawingContentView.m; sourceTree = "<group>"; };
+		07A0CD9A1B23D2EF00185CEE /* ORKDrawingStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKDrawingStep.h; sourceTree = "<group>"; };
+		07A0CD9B1B23D2EF00185CEE /* ORKDrawingStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKDrawingStep.m; sourceTree = "<group>"; };
 		147503AD1AEE8071004B17F3 /* ORKAudioGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKAudioGenerator.h; sourceTree = "<group>"; };
 		147503AE1AEE8071004B17F3 /* ORKAudioGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKAudioGenerator.m; sourceTree = "<group>"; };
 		147503B11AEE807C004B17F3 /* ORKToneAudiometryContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKToneAudiometryContentView.h; sourceTree = "<group>"; };
@@ -830,6 +892,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		07A0CD5F1B23650500185CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A0CD881B23660100185CEE /* ResearchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A0CD771B23650500185CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86CC8E971AC09332001CCD89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -849,6 +926,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07A0CD591B23644400185CEE /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				07A0CD911B2367B200185CEE /* ORKDrawingStepViewController.h */,
+				07A0CD921B2367B200185CEE /* ORKDrawingStepViewController.m */,
+				07A0CD951B23686700185CEE /* ORKDrawingContentView.h */,
+				07A0CD961B23686700185CEE /* ORKDrawingContentView.m */,
+				07A0CD9A1B23D2EF00185CEE /* ORKDrawingStep.h */,
+				07A0CD9B1B23D2EF00185CEE /* ORKDrawingStep.m */,
+			);
+			name = Drawing;
+			sourceTree = "<group>";
+		};
+		07A0CD631B23650500185CEE /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				07A0CD681B23650500185CEE /* AppDelegate.h */,
+				07A0CD691B23650500185CEE /* AppDelegate.m */,
+				07A0CD6B1B23650500185CEE /* ViewController.h */,
+				07A0CD6C1B23650500185CEE /* ViewController.m */,
+				07A0CD6E1B23650500185CEE /* Main.storyboard */,
+				07A0CD711B23650500185CEE /* Images.xcassets */,
+				07A0CD731B23650500185CEE /* LaunchScreen.xib */,
+				07A0CD641B23650500185CEE /* Supporting Files */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		07A0CD641B23650500185CEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A0CD651B23650500185CEE /* Info.plist */,
+				07A0CD661B23650500185CEE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07A0CD7D1B23650500185CEE /* DrawingTests */ = {
+			isa = PBXGroup;
+			children = (
+				07A0CD801B23650500185CEE /* DrawingTests.m */,
+				07A0CD7E1B23650500185CEE /* Supporting Files */,
+			);
+			path = DrawingTests;
+			sourceTree = "<group>";
+		};
+		07A0CD7E1B23650500185CEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A0CD7F1B23650500185CEE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		147503AC1AEE8058004B17F3 /* Tone Audiometry */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +1020,8 @@
 				B11DF3B21AA109C8009E76D2 /* docs */,
 				86B623AF19520B770074CD3C /* ResearchKit */,
 				86CC8EA61AC09383001CCD89 /* ResearchKitTests */,
+				07A0CD631B23650500185CEE /* Drawing */,
+				07A0CD7D1B23650500185CEE /* DrawingTests */,
 				3FFF183F1829DB1D00167070 /* Frameworks */,
 				3FFF183E1829DB1D00167070 /* Products */,
 			);
@@ -900,6 +1033,8 @@
 				86B623AD19520B770074CD3C /* ResearchKit.framework */,
 				B183A5951A8535D100C76870 /* ResearchKit.framework */,
 				86CC8E9A1AC09332001CCD89 /* ResearchKitTests.xctest */,
+				07A0CD621B23650500185CEE /* Drawing.app */,
+				07A0CD7A1B23650500185CEE /* DrawingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -945,6 +1080,7 @@
 		86C40AF91A8D7C5B00081FAC /* ActiveTasks */ = {
 			isa = PBXGroup;
 			children = (
+				07A0CD591B23644400185CEE /* Drawing */,
 				B12EFF4F1AB2165B00A80147 /* Common */,
 				B12EFF4E1AB2161500A80147 /* Audio */,
 				B12EFF5D1AB2177700A80147 /* Fitness */,
@@ -1766,6 +1902,7 @@
 				86C40C361A8D7C5C00081FAC /* ORKSpatialSpanGame.h in Headers */,
 				86C40CAC1A8D7C5C00081FAC /* ORKRecorder.h in Headers */,
 				865EA1681ABA1AA10037C68E /* ORKPicker.h in Headers */,
+				07A0CD971B23686700185CEE /* ORKDrawingContentView.h in Headers */,
 				86C40CC81A8D7C5C00081FAC /* ORKFormItemCell.h in Headers */,
 				86C40DF21A8D7C5C00081FAC /* ORKConsentReviewController.h in Headers */,
 				86C40C961A8D7C5C00081FAC /* ORKDataLogger.h in Headers */,
@@ -1818,6 +1955,7 @@
 				86C40CA81A8D7C5C00081FAC /* ORKPedometerRecorder.h in Headers */,
 				86C40CD01A8D7C5C00081FAC /* ORKInstructionStepView.h in Headers */,
 				86C40E021A8D7C5C00081FAC /* ORKConsentDocument_Internal.h in Headers */,
+				07A0CD9C1B23D2EF00185CEE /* ORKDrawingStep.h in Headers */,
 				86C40E181A8D7C5C00081FAC /* ORKConsentSection.h in Headers */,
 				86AD910A1AB7AD1E00361FEB /* ORKNavigationContainerView.h in Headers */,
 				865EA16C1ABA1BE20037C68E /* ORKSurveyAnswerCellForPicker.h in Headers */,
@@ -1898,6 +2036,7 @@
 				86C40D381A8D7C5C00081FAC /* ORKHTMLPDFWriter.h in Headers */,
 				86C40D561A8D7C5C00081FAC /* ORKOrderedTask.h in Headers */,
 				86C40C4E1A8D7C5C00081FAC /* ORKTappingContentView.h in Headers */,
+				07A0CD931B2367B200185CEE /* ORKDrawingStepViewController.h in Headers */,
 				86C40CA01A8D7C5C00081FAC /* ORKHealthQuantityTypeRecorder.h in Headers */,
 				BC13CE401B0666FD0044153C /* ORKResultPredicate.h in Headers */,
 				86C40CFA1A8D7C5C00081FAC /* ORKCaption1Label.h in Headers */,
@@ -1940,6 +2079,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		07A0CD611B23650500185CEE /* Drawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A0CD821B23650500185CEE /* Build configuration list for PBXNativeTarget "Drawing" */;
+			buildPhases = (
+				07A0CD5E1B23650500185CEE /* Sources */,
+				07A0CD5F1B23650500185CEE /* Frameworks */,
+				07A0CD601B23650500185CEE /* Resources */,
+				07A0CD8C1B23660200185CEE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A0CD8B1B23660100185CEE /* PBXTargetDependency */,
+			);
+			name = Drawing;
+			productName = Drawing;
+			productReference = 07A0CD621B23650500185CEE /* Drawing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07A0CD791B23650500185CEE /* DrawingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A0CD851B23650500185CEE /* Build configuration list for PBXNativeTarget "DrawingTests" */;
+			buildPhases = (
+				07A0CD761B23650500185CEE /* Sources */,
+				07A0CD771B23650500185CEE /* Frameworks */,
+				07A0CD781B23650500185CEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A0CD7C1B23650500185CEE /* PBXTargetDependency */,
+			);
+			name = DrawingTests;
+			productName = DrawingTests;
+			productReference = 07A0CD7A1B23650500185CEE /* DrawingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		86CC8E991AC09332001CCD89 /* ResearchKitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86CC8EA31AC09332001CCD89 /* Build configuration list for PBXNativeTarget "ResearchKitTests" */;
@@ -1987,6 +2163,13 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = researchkit.org;
 				TargetAttributes = {
+					07A0CD611B23650500185CEE = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					07A0CD791B23650500185CEE = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 07A0CD611B23650500185CEE;
+					};
 					86CC8E991AC09332001CCD89 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -2057,11 +2240,30 @@
 				B183A4731A8535D100C76870 /* ResearchKit */,
 				86CC8E991AC09332001CCD89 /* ResearchKitTests */,
 				B18FF3A41A9FE25700C0C3B0 /* docs */,
+				07A0CD611B23650500185CEE /* Drawing */,
+				07A0CD791B23650500185CEE /* DrawingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		07A0CD601B23650500185CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A0CD701B23650500185CEE /* Main.storyboard in Resources */,
+				07A0CD751B23650500185CEE /* LaunchScreen.xib in Resources */,
+				07A0CD721B23650500185CEE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A0CD781B23650500185CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86CC8E981AC09332001CCD89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2128,6 +2330,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07A0CD5E1B23650500185CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A0CD6D1B23650500185CEE /* ViewController.m in Sources */,
+				07A0CD6A1B23650500185CEE /* AppDelegate.m in Sources */,
+				07A0CD671B23650500185CEE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A0CD761B23650500185CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A0CD811B23650500185CEE /* DrawingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86CC8E961AC09332001CCD89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2216,6 +2436,7 @@
 				86C40D421A8D7C5C00081FAC /* ORKInstructionStep.m in Sources */,
 				86C40C2C1A8D7C5C00081FAC /* ORKFitnessContentView.m in Sources */,
 				D458520B1AF6CCFA00A2DE13 /* ORKImageCaptureCameraPreviewView.m in Sources */,
+				07A0CD941B2367B200185CEE /* ORKDrawingStepViewController.m in Sources */,
 				86C40E1A1A8D7C5C00081FAC /* ORKConsentSection.m in Sources */,
 				86C40C241A8D7C5C00081FAC /* ORKCountdownStep.m in Sources */,
 				86C40CA21A8D7C5C00081FAC /* ORKHealthQuantityTypeRecorder.m in Sources */,
@@ -2247,6 +2468,7 @@
 				86C40C201A8D7C5C00081FAC /* ORKAudioStepViewController.m in Sources */,
 				86C40D081A8D7C5C00081FAC /* ORKCountdownLabel.m in Sources */,
 				86C40E121A8D7C5C00081FAC /* ORKConsentSceneViewController.m in Sources */,
+				07A0CD981B23686700185CEE /* ORKDrawingContentView.m in Sources */,
 				D442397E1AF17F7600559D96 /* ORKImageCaptureStepViewController.m in Sources */,
 				86C40CAE1A8D7C5C00081FAC /* ORKRecorder.m in Sources */,
 				86C40DAC1A8D7C5C00081FAC /* ORKSurveyAnswerCellForNumber.m in Sources */,
@@ -2290,6 +2512,7 @@
 				86C40CCE1A8D7C5C00081FAC /* ORKImageSelectionView.m in Sources */,
 				86C40D461A8D7C5C00081FAC /* ORKInstructionStepViewController.m in Sources */,
 				86C40C7C1A8D7C5C00081FAC /* ORKAccelerometerRecorder.m in Sources */,
+				07A0CD9D1B23D2EF00185CEE /* ORKDrawingStep.m in Sources */,
 				86C40C861A8D7C5C00081FAC /* ORKActiveStepTimer.m in Sources */,
 				B11C549B1A9EEF8800265E61 /* ORKConsentSharingStep.m in Sources */,
 				86C40DE01A8D7C5C00081FAC /* ORKVerticalContainerView.m in Sources */,
@@ -2312,6 +2535,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		07A0CD7C1B23650500185CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A0CD611B23650500185CEE /* Drawing */;
+			targetProxy = 07A0CD7B1B23650500185CEE /* PBXContainerItemProxy */;
+		};
+		07A0CD8B1B23660100185CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B183A4731A8535D100C76870 /* ResearchKit */;
+			targetProxy = 07A0CD8A1B23660100185CEE /* PBXContainerItemProxy */;
+		};
 		86CC8EA21AC09332001CCD89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B183A4731A8535D100C76870 /* ResearchKit */;
@@ -2325,6 +2558,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		07A0CD6E1B23650500185CEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07A0CD6F1B23650500185CEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07A0CD731B23650500185CEE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07A0CD741B23650500185CEE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		B1C0F4E11A9BA65F0022C153 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2374,6 +2623,106 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		07A0CD831B23650500185CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Drawing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07A0CD841B23650500185CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Drawing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07A0CD861B23650500185CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DrawingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drawing.app/Drawing";
+			};
+			name = Debug;
+		};
+		07A0CD871B23650500185CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DrawingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drawing.app/Drawing";
+			};
+			name = Release;
+		};
 		3FFF18691829DB1E00167070 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2560,6 +2909,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		07A0CD821B23650500185CEE /* Build configuration list for PBXNativeTarget "Drawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A0CD831B23650500185CEE /* Debug */,
+				07A0CD841B23650500185CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A0CD851B23650500185CEE /* Build configuration list for PBXNativeTarget "DrawingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A0CD861B23650500185CEE /* Debug */,
+				07A0CD871B23650500185CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3FFF18381829DB1D00167070 /* Build configuration list for PBXProject "ResearchKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
