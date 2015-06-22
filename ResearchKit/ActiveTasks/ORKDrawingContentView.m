@@ -26,6 +26,31 @@
 
 @implementation ORKDrawingContentView
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:self
+                                                                       attribute:NSLayoutAttributeWidth
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:nil
+                                                                       attribute:NSLayoutAttributeNotAnAttribute
+                                                                      multiplier:1
+                                                                  constant:[UIScreen mainScreen].bounds.size.width];
+        width.priority = UILayoutPriorityFittingSizeLevel;
+        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:self
+                                                                       attribute:NSLayoutAttributeHeight
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:nil
+                                                                       attribute:NSLayoutAttributeNotAnAttribute
+                                                                      multiplier:1
+                                                                        constant:[UIScreen mainScreen].bounds.size.height];
+        height.priority = UILayoutPriorityFittingSizeLevel;
+        [self addConstraints:@[width, height]];
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     [[UIColor redColor] set];
     for (UIBezierPath *path in self.paths) {
